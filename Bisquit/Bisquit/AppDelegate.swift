@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Bisquit
 //
-//  Created by Nicola on 31/10/18.
+//  Created by Giovanni Filaferro on 31/10/2018.
 //  Copyright © 2018 ho0t. All rights reserved.
 //
 
@@ -13,8 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
         return true
     }
 
