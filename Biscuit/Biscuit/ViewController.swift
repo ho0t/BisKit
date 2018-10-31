@@ -17,6 +17,12 @@ class ViewController: UIViewController {
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let biscuit = BiscuitViewController(text: "foo bar")
+        self.present(biscuit, animated: false, completion: nil)
+    }
 
 }
 
