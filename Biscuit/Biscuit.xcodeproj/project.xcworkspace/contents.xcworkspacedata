@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Bisquit.xcodeproj">
+      location = "self:Biscuit.xcodeproj">
    </FileRef>
 </Workspace>

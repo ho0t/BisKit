@@ -1,15 +1,15 @@
 //
-//  BisquitTests.swift
-//  BisquitTests
+//  BiscuitTests.swift
+//  BiscuitTests
 //
 //  Created by Giovanni Filaferro on 31/10/2018.
 //  Copyright © 2018 ho0t. All rights reserved.
 //
 
 import XCTest
-@testable import Bisquit
+@testable import Biscuit
 
-class BisquitTests: XCTestCase {
+class BiscuitTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
