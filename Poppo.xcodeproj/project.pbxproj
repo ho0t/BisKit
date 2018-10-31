@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2C1733218A55E90018329A /* BisKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2C172A218A55E90018329A /* BisKit.framework */; };
+		1E2C173A218A55E90018329A /* BisKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1739218A55E90018329A /* BisKitTests.swift */; };
+		1E2C173C218A55EA0018329A /* BisKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2C172C218A55E90018329A /* BisKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E2C173F218A55EA0018329A /* BisKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2C172A218A55E90018329A /* BisKit.framework */; };
+		1E2C1740218A55EA0018329A /* BisKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2C172A218A55E90018329A /* BisKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E2C1748218A56220018329A /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1747218A56220018329A /* Topping.swift */; };
+		1E2C174A218A56BB0018329A /* ToppingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1749218A56BB0018329A /* ToppingLabel.swift */; };
 		B3706A7E218A49C8001D1FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706A7D218A49C8001D1FF7 /* AppDelegate.swift */; };
 		B3706A80218A49C8001D1FF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706A7F218A49C8001D1FF7 /* ViewController.swift */; };
 		B3706A83218A49C8001D1FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3706A81218A49C8001D1FF7 /* Main.storyboard */; };
@@ -17,6 +24,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E2C1734218A55E90018329A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3706A72218A49C8001D1FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E2C1729218A55E90018329A;
+			remoteInfo = BisKit;
+		};
+		1E2C1736218A55E90018329A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3706A72218A49C8001D1FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3706A79218A49C8001D1FF7;
+			remoteInfo = Poppo;
+		};
+		1E2C173D218A55EA0018329A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3706A72218A49C8001D1FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E2C1729218A55E90018329A;
+			remoteInfo = BisKit;
+		};
 		B3706A8F218A49C9001D1FF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B3706A72218A49C8001D1FF7 /* Project object */;
@@ -33,7 +61,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1E2C171F218A4E1A0018329A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E2C1740218A55EA0018329A /* BisKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1E2C172A218A55E90018329A /* BisKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BisKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2C172C218A55E90018329A /* BisKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BisKit.h; sourceTree = "<group>"; };
+		1E2C172D218A55E90018329A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E2C1732218A55E90018329A /* BisKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BisKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2C1739218A55E90018329A /* BisKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BisKitTests.swift; sourceTree = "<group>"; };
+		1E2C173B218A55E90018329A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E2C1747218A56220018329A /* Topping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
+		1E2C1749218A56BB0018329A /* ToppingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingLabel.swift; sourceTree = "<group>"; };
 		B3706A7A218A49C8001D1FF7 /* Poppo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3706A7D218A49C8001D1FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3706A7F218A49C8001D1FF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,10 +100,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E2C1727218A55E90018329A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2C172F218A55E90018329A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2C1733218A55E90018329A /* BisKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3706A77218A49C8001D1FF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E2C173F218A55EA0018329A /* BisKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +140,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E2C172B218A55E90018329A /* BisKit */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C172C218A55E90018329A /* BisKit.h */,
+				1E2C1747218A56220018329A /* Topping.swift */,
+				1E2C1749218A56BB0018329A /* ToppingLabel.swift */,
+				1E2C172D218A55E90018329A /* Info.plist */,
+			);
+			path = BisKit;
+			sourceTree = "<group>";
+		};
+		1E2C1738218A55E90018329A /* BisKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C1739218A55E90018329A /* BisKitTests.swift */,
+				1E2C173B218A55E90018329A /* Info.plist */,
+			);
+			path = BisKitTests;
+			sourceTree = "<group>";
+		};
 		B3706A71218A49C8001D1FF7 = {
 			isa = PBXGroup;
 			children = (
 				B3706A7C218A49C8001D1FF7 /* Poppo */,
 				B3706A91218A49C9001D1FF7 /* PoppoTests */,
 				B3706A9C218A49C9001D1FF7 /* PoppoUITests */,
+				1E2C172B218A55E90018329A /* BisKit */,
+				1E2C1738218A55E90018329A /* BisKitTests */,
 				B3706A7B218A49C8001D1FF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +178,8 @@
 				B3706A7A218A49C8001D1FF7 /* Poppo.app */,
 				B3706A8E218A49C9001D1FF7 /* PoppoTests.xctest */,
 				B3706A99218A49C9001D1FF7 /* PoppoUITests.xctest */,
+				1E2C172A218A55E90018329A /* BisKit.framework */,
+				1E2C1732218A55E90018329A /* BisKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,7 +217,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1E2C1725218A55E90018329A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2C173C218A55EA0018329A /* BisKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		1E2C1729218A55E90018329A /* BisKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E2C1741218A55EA0018329A /* Build configuration list for PBXNativeTarget "BisKit" */;
+			buildPhases = (
+				1E2C1725218A55E90018329A /* Headers */,
+				1E2C1726218A55E90018329A /* Sources */,
+				1E2C1727218A55E90018329A /* Frameworks */,
+				1E2C1728218A55E90018329A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BisKit;
+			productName = BisKit;
+			productReference = 1E2C172A218A55E90018329A /* BisKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1E2C1731218A55E90018329A /* BisKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E2C1744218A55EA0018329A /* Build configuration list for PBXNativeTarget "BisKitTests" */;
+			buildPhases = (
+				1E2C172E218A55E90018329A /* Sources */,
+				1E2C172F218A55E90018329A /* Frameworks */,
+				1E2C1730218A55E90018329A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E2C1735218A55E90018329A /* PBXTargetDependency */,
+				1E2C1737218A55E90018329A /* PBXTargetDependency */,
+			);
+			name = BisKitTests;
+			productName = BisKitTests;
+			productReference = 1E2C1732218A55E90018329A /* BisKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B3706A79218A49C8001D1FF7 /* Poppo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3706AA2218A49C9001D1FF7 /* Build configuration list for PBXNativeTarget "Poppo" */;
@@ -135,10 +273,12 @@
 				B3706A76218A49C8001D1FF7 /* Sources */,
 				B3706A77218A49C8001D1FF7 /* Frameworks */,
 				B3706A78218A49C8001D1FF7 /* Resources */,
+				1E2C171F218A4E1A0018329A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1E2C173E218A55EA0018329A /* PBXTargetDependency */,
 			);
 			name = Poppo;
 			productName = Poppo;
@@ -187,10 +327,18 @@
 		B3706A72218A49C8001D1FF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = ho0t;
 				TargetAttributes = {
+					1E2C1729218A55E90018329A = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					1E2C1731218A55E90018329A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B3706A79218A49C8001D1FF7;
+					};
 					B3706A79218A49C8001D1FF7 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -220,11 +368,27 @@
 				B3706A79218A49C8001D1FF7 /* Poppo */,
 				B3706A8D218A49C9001D1FF7 /* PoppoTests */,
 				B3706A98218A49C9001D1FF7 /* PoppoUITests */,
+				1E2C1729218A55E90018329A /* BisKit */,
+				1E2C1731218A55E90018329A /* BisKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E2C1728218A55E90018329A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2C1730218A55E90018329A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3706A78218A49C8001D1FF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +416,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E2C1726218A55E90018329A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2C174A218A56BB0018329A /* ToppingLabel.swift in Sources */,
+				1E2C1748218A56220018329A /* Topping.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2C172E218A55E90018329A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2C173A218A55E90018329A /* BisKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3706A76218A49C8001D1FF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +461,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1E2C1735218A55E90018329A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E2C1729218A55E90018329A /* BisKit */;
+			targetProxy = 1E2C1734218A55E90018329A /* PBXContainerItemProxy */;
+		};
+		1E2C1737218A55E90018329A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3706A79218A49C8001D1FF7 /* Poppo */;
+			targetProxy = 1E2C1736218A55E90018329A /* PBXContainerItemProxy */;
+		};
+		1E2C173E218A55EA0018329A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E2C1729218A55E90018329A /* BisKit */;
+			targetProxy = 1E2C173D218A55EA0018329A /* PBXContainerItemProxy */;
+		};
 		B3706A90218A49C9001D1FF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B3706A79218A49C8001D1FF7 /* Poppo */;
@@ -312,6 +508,113 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E2C1742218A55EA0018329A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 498K6C2R6K;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BisKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BisKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E2C1743218A55EA0018329A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 498K6C2R6K;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BisKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BisKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1E2C1745218A55EA0018329A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BisKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BisKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poppo.app/Poppo";
+			};
+			name = Debug;
+		};
+		1E2C1746218A55EA0018329A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BisKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BisKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poppo.app/Poppo";
+			};
+			name = Release;
+		};
 		B3706AA0218A49C9001D1FF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -429,9 +732,10 @@
 		B3706AA3218A49C9001D1FF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				DEVELOPMENT_TEAM = 498K6C2R6K;
 				INFOPLIST_FILE = Poppo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,7 +743,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.Poppo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -447,9 +751,10 @@
 		B3706AA4218A49C9001D1FF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				DEVELOPMENT_TEAM = 498K6C2R6K;
 				INFOPLIST_FILE = Poppo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,7 +762,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.Poppo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -547,6 +852,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E2C1741218A55EA0018329A /* Build configuration list for PBXNativeTarget "BisKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2C1742218A55EA0018329A /* Debug */,
+				1E2C1743218A55EA0018329A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E2C1744218A55EA0018329A /* Build configuration list for PBXNativeTarget "BisKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2C1745218A55EA0018329A /* Debug */,
+				1E2C1746218A55EA0018329A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B3706A75218A49C8001D1FF7 /* Build configuration list for PBXProject "Poppo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
