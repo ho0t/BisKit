@@ -1,15 +1,15 @@
 //
-//  BisKItTests.swift
-//  BisKItTests
+//  BisKitTests.swift
+//  BisKitTests
 //
 //  Created by Giovanni Filaferro on 31/10/2018.
 //  Copyright © 2018 ho0t. All rights reserved.
 //
 
 import XCTest
-@testable import BisKIt
+@testable import BisKit
 
-class BisKItTests: XCTestCase {
+class BisKitTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
