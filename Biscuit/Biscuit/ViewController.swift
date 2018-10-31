@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BisKit
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let biscuit = BiscuitViewController(text: "foo bar")
+        self.present(biscuit, animated: false, completion: nil)
+    }
 
 }
 

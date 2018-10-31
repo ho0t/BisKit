@@ -9,7 +9,7 @@
 import Foundation
 
 
-public protocol Toppable {
+public protocol Toppable where Self: UIView {
     
     var intrinsicHeight: CGFloat { get set }
     
