@@ -6,7 +6,7 @@
 //  Copyright © 2018 ho0t. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 public protocol Toppable where Self: UIView {
