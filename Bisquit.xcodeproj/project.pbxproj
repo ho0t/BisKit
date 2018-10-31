@@ -12,7 +12,7 @@
 		1E2C173C218A55EA0018329A /* BisKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2C172C218A55E90018329A /* BisKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E2C173F218A55EA0018329A /* BisKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2C172A218A55E90018329A /* BisKit.framework */; };
 		1E2C1740218A55EA0018329A /* BisKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2C172A218A55E90018329A /* BisKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1E2C1748218A56220018329A /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1747218A56220018329A /* Topping.swift */; };
+		1E2C1748218A56220018329A /* Toppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1747218A56220018329A /* Toppable.swift */; };
 		1E2C174A218A56BB0018329A /* ToppingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1749218A56BB0018329A /* ToppingLabel.swift */; };
 		B3706A7E218A49C8001D1FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706A7D218A49C8001D1FF7 /* AppDelegate.swift */; };
 		B3706A80218A49C8001D1FF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706A7F218A49C8001D1FF7 /* ViewController.swift */; };
@@ -82,7 +82,7 @@
 		1E2C1732218A55E90018329A /* BisKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BisKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E2C1739218A55E90018329A /* BisKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BisKitTests.swift; sourceTree = "<group>"; };
 		1E2C173B218A55E90018329A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E2C1747218A56220018329A /* Topping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
+		1E2C1747218A56220018329A /* Toppable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toppable.swift; sourceTree = "<group>"; };
 		1E2C1749218A56BB0018329A /* ToppingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingLabel.swift; sourceTree = "<group>"; };
 		B3706A7A218A49C8001D1FF7 /* Poppo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3706A7D218A49C8001D1FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1E2C172C218A55E90018329A /* BisKit.h */,
-				1E2C1747218A56220018329A /* Topping.swift */,
+				1E2C1747218A56220018329A /* Toppable.swift */,
 				1E2C1749218A56BB0018329A /* ToppingLabel.swift */,
 				1E2C172D218A55E90018329A /* Info.plist */,
 			);
@@ -163,9 +163,9 @@
 		B3706A71218A49C8001D1FF7 = {
 			isa = PBXGroup;
 			children = (
-				B3706A7C218A49C8001D1FF7 /* Poppo */,
-				B3706A91218A49C9001D1FF7 /* PoppoTests */,
-				B3706A9C218A49C9001D1FF7 /* PoppoUITests */,
+				B3706A7C218A49C8001D1FF7 /* Bisquit */,
+				B3706A91218A49C9001D1FF7 /* BisquitTests */,
+				B3706A9C218A49C9001D1FF7 /* BisquitUITests */,
 				1E2C172B218A55E90018329A /* BisKit */,
 				1E2C1738218A55E90018329A /* BisKitTests */,
 				B3706A7B218A49C8001D1FF7 /* Products */,
@@ -184,7 +184,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B3706A7C218A49C8001D1FF7 /* Poppo */ = {
+		B3706A7C218A49C8001D1FF7 /* Bisquit */ = {
 			isa = PBXGroup;
 			children = (
 				B3706A7D218A49C8001D1FF7 /* AppDelegate.swift */,
@@ -194,25 +194,25 @@
 				B3706A86218A49C9001D1FF7 /* LaunchScreen.storyboard */,
 				B3706A89218A49C9001D1FF7 /* Info.plist */,
 			);
-			path = Poppo;
+			path = Bisquit;
 			sourceTree = "<group>";
 		};
-		B3706A91218A49C9001D1FF7 /* PoppoTests */ = {
+		B3706A91218A49C9001D1FF7 /* BisquitTests */ = {
 			isa = PBXGroup;
 			children = (
 				B3706A92218A49C9001D1FF7 /* PoppoTests.swift */,
 				B3706A94218A49C9001D1FF7 /* Info.plist */,
 			);
-			path = PoppoTests;
+			path = BisquitTests;
 			sourceTree = "<group>";
 		};
-		B3706A9C218A49C9001D1FF7 /* PoppoUITests */ = {
+		B3706A9C218A49C9001D1FF7 /* BisquitUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B3706A9D218A49C9001D1FF7 /* PoppoUITests.swift */,
 				B3706A9F218A49C9001D1FF7 /* Info.plist */,
 			);
-			path = PoppoUITests;
+			path = BisquitUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,7 +352,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B3706A75218A49C8001D1FF7 /* Build configuration list for PBXProject "Poppo" */;
+			buildConfigurationList = B3706A75218A49C8001D1FF7 /* Build configuration list for PBXProject "Bisquit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -421,7 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E2C174A218A56BB0018329A /* ToppingLabel.swift in Sources */,
-				1E2C1748218A56220018329A /* Topping.swift in Sources */,
+				1E2C1748218A56220018329A /* Toppable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -870,7 +870,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3706A75218A49C8001D1FF7 /* Build configuration list for PBXProject "Poppo" */ = {
+		B3706A75218A49C8001D1FF7 /* Build configuration list for PBXProject "Bisquit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3706AA0218A49C9001D1FF7 /* Debug */,

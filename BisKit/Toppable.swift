@@ -1,5 +1,5 @@
 //
-//  Topping.swift
+//  Toppable.swift
 //  BisKit
 //
 //  Created by Giovanni Filaferro on 31/10/2018.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-public protocol Topping {
+public protocol Toppable {
     
     var intrinsicHeight: CGFloat { get set }
     

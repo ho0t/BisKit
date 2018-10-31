@@ -33,13 +33,14 @@ public class ToppingLabel: UILabel {
     private func commonInit() {
         self.font = UIFont.preferredFont(forTextStyle: .callout)
         self.textColor = UIColor.lightGray
-        
+        self.lineBreakMode = .byWordWrapping
     }
     
 }
 
 
-extension ToppingLabel: Topping {
+// MARK: Toppable Implementation
+extension ToppingLabel: Toppable {
     
     public var intrinsicHeight: CGFloat {
         get {
@@ -49,8 +50,6 @@ extension ToppingLabel: Topping {
             self.desiredHeight = self.intrinsicHeight
         }
     }
-    
-    
     
     public func layout(for width: CGFloat) {
         guard let txt = self.text else {
@@ -62,8 +61,6 @@ extension ToppingLabel: Topping {
             ], context: nil)
         self.desiredHeight = size.height
     }
-    
-    
     
     
 }
