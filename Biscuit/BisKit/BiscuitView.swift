@@ -32,7 +32,7 @@ public class BiscuitView: UIView {
         effectView.translatesAutoresizingMaskIntoConstraints = false
         
         layer.shadowOpacity = 0.25
-        layer.shadowRadius = 50.0
+        layer.shadowRadius = 25.0
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 10)
         

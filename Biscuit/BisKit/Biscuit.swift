@@ -18,7 +18,20 @@ public class BiscuitViewController: UIViewController, Biscuit {
     
     private let biscuitView = BiscuitView()
     private var topConstraint: NSLayoutConstraint!
-    private var timeout = 0.0
+    private var timeout: Double = 0.0
+    private lazy var fadeInAnimator = {
+        UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1.2) { [unowned self] in
+            self.biscuitView.alpha = 1.0
+            self.biscuitView.transform = CGAffineTransform(translationX: 0, y: -self.topConstraint.constant)
+        }
+    }()
+    
+    private lazy var fadeOutAnimator = {
+        UIViewPropertyAnimator(duration: 0.5 + 1.0, dampingRatio: 1.2) { [unowned self] in
+            self.biscuitView.transform = CGAffineTransform(translationX: 0, y: self.topConstraint.constant - 50)
+        }
+    }()
+    
     
     // Initializers
     
@@ -52,44 +65,39 @@ public class BiscuitViewController: UIViewController, Biscuit {
         
         self.view.addSubview(biscuitView)
         
-        let height: CGFloat = 64.0
-        topConstraint = biscuitView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: -height - 30.0)
+        topConstraint = biscuitView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0.0)
+        calculateTopConstraint()
         
         NSLayoutConstraint.activate([
             topConstraint,
             biscuitView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             biscuitView.widthAnchor.constraint(equalToConstant: 200.0),
-            biscuitView.heightAnchor.constraint(equalToConstant: height)
+            biscuitView.heightAnchor.constraint(equalToConstant: 64.0)
             ])
+    }
+    
+    private func calculateTopConstraint() {
+        let height: CGFloat = 64.0
+        topConstraint.constant = -height - 20.0
     }
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.topConstraint.constant = 20.0
         self.biscuitView.alpha = 0.0
         
-        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: {
-            self.view.layoutIfNeeded()
-            self.biscuitView.alpha = 1.0
-        }) { (completed) in
-            self.perform(#selector(self.dismissWithAnimation), with: nil, afterDelay: self.timeout)
+        calculateTopConstraint()
+        
+        self.fadeInAnimator.addCompletion { [unowned self] _ in
+            self.fadeOutAnimator.startAnimation(afterDelay: self.timeout)
         }
         
-        //should call cancelPreviousPerformRequestsWithTarget if dismissal gestures are allowed
-        
-    }
-    
-    @objc func dismissWithAnimation() {
-        
-        self.topConstraint.constant = -150.0
-        
-        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 1.0, options: .curveEaseIn, animations: {
-            self.view.layoutIfNeeded()
-        }) { (completed) in
-            self.view.isHidden = true
+        self.fadeOutAnimator.addCompletion { [unowned self] _ in
             self.dismiss(animated: false, completion: nil)
         }
         
+        self.fadeInAnimator.startAnimation()
+        
     }
+    
     
 }

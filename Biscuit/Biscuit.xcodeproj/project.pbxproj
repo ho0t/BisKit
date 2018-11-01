@@ -21,9 +21,10 @@
 		1E2C1828218A63500018329A /* BisKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2C1812218A63500018329A /* BisKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E2C1831218A635D0018329A /* ToppingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C182F218A635D0018329A /* ToppingLabel.swift */; };
 		1E2C1832218A635D0018329A /* Toppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1830218A635D0018329A /* Toppable.swift */; };
+		1E2C1834218A64860018329A /* ToppingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1833218A64860018329A /* ToppingButton.swift */; };
 		B3706AB6218A63C0001D1FF7 /* Biscuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706AB5218A63C0001D1FF7 /* Biscuit.swift */; };
 		B3706AB8218A63C5001D1FF7 /* BiscuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */; };
-		1E2C1834218A64860018329A /* ToppingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1833218A64860018329A /* ToppingButton.swift */; };
+		B37D7FB9218B7B54004F7AE7 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B37D7FB8218B7B54004F7AE7 /* demo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,9 +101,10 @@
 		1E2C1823218A63500018329A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E2C182F218A635D0018329A /* ToppingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingLabel.swift; sourceTree = "<group>"; };
 		1E2C1830218A635D0018329A /* Toppable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toppable.swift; sourceTree = "<group>"; };
+		1E2C1833218A64860018329A /* ToppingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingButton.swift; sourceTree = "<group>"; };
 		B3706AB5218A63C0001D1FF7 /* Biscuit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biscuit.swift; sourceTree = "<group>"; };
 		B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitView.swift; sourceTree = "<group>"; };
-		1E2C1833218A64860018329A /* ToppingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingButton.swift; sourceTree = "<group>"; };
+		B37D7FB8218B7B54004F7AE7 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		1E2C17B7218A62370018329A /* Biscuit */ = {
 			isa = PBXGroup;
 			children = (
+				B37D7FB8218B7B54004F7AE7 /* demo.jpg */,
 				1E2C17B8218A62370018329A /* AppDelegate.swift */,
 				1E2C17BA218A62370018329A /* ViewController.swift */,
 				1E2C17BC218A62370018329A /* Main.storyboard */,
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E2C17C3218A62370018329A /* LaunchScreen.storyboard in Resources */,
+				B37D7FB9218B7B54004F7AE7 /* demo.jpg in Resources */,
 				1E2C17C0218A62370018329A /* Assets.xcassets in Resources */,
 				1E2C17BE218A62370018329A /* Main.storyboard in Resources */,
 			);

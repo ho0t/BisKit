@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBAction func didTapTextBiscuit() {
         
         let biscuit = BiscuitViewController(text: "foo bar", timeout: 3.0)
-        self.present(biscuit, animated: true, completion: nil)
+        self.present(biscuit, animated: false, completion: nil)
     }
 }
 
