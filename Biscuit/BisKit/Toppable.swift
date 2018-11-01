@@ -11,7 +11,7 @@ import UIKit
 
 public protocol Toppable {
     
-    var intrinsicHeight: CGFloat { get set }
+    var intrinsicHeight: CGFloat { get }
     var relativeView: UIView { get }
     
     func layout(for width: CGFloat)

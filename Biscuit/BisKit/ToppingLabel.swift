@@ -31,7 +31,7 @@ public class ToppingLabel: UILabel {
     
     
     private func commonInit() {
-        self.font = UIFont.preferredFont(forTextStyle: .callout)
+        self.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         self.textColor = UIColor.lightGray
         self.lineBreakMode = .byWordWrapping
         self.textAlignment = .center
@@ -50,21 +50,18 @@ extension ToppingLabel: Toppable {
         get {
             return self.desiredHeight
         }
-        set {
-            self.desiredHeight = newValue
-        }
     }
     
     public func layout(for width: CGFloat) {
         guard let txt = self.text else {
-            self.intrinsicHeight = 10
+            self.desiredHeight = 10
             return
         }
         
         let size = txt.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [
             NSAttributedString.Key.font : self.font
             ], context: nil)
-        self.intrinsicHeight = size.height
+        self.desiredHeight = size.height
     }
     
     

@@ -12,7 +12,18 @@ public class BiscuitViewController: UIViewController {
     
     // Private Properties
     private var toppings: [Toppable] = [Toppable]()
-    private var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 20, bottom: 10, right: 20) {
+    public var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 20, bottom: 10, right: 20) {
+        didSet {
+            self.view.setNeedsLayout()
+        }
+    }
+    
+    public var titlePadding: CGFloat = 2 {
+        didSet {
+            self.view.setNeedsLayout()
+        }
+    }
+    public var elementPadding: CGFloat = 1 {
         didSet {
             self.view.setNeedsLayout()
         }
@@ -32,7 +43,7 @@ public class BiscuitViewController: UIViewController {
         
         func biscuitHeight() -> CGFloat {
             if self == .closed {
-                return 64.0
+                return 50
             }
             return State.automaticDimension
         }
@@ -41,14 +52,14 @@ public class BiscuitViewController: UIViewController {
             if self == .closed {
                 return self.biscuitHeight()
             }
-            return 25.0
+            return 15.0
         }
         
         func titleFont() -> UIFont {
             if self == .open {
-                return UIFont.systemFont(ofSize: 16, weight: .medium)
+                return UIFont.systemFont(ofSize: 12, weight: .medium)
             }
-            return UIFont.systemFont(ofSize: 18, weight: .medium)
+            return UIFont.systemFont(ofSize: 14, weight: .medium)
         }
         
         func canTransition(to: State) -> Bool {
@@ -91,7 +102,7 @@ public class BiscuitViewController: UIViewController {
         NSLayoutConstraint.activate([
             self.biscuitBackground.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20.0),
             self.biscuitBackground.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.biscuitBackground.widthAnchor.constraint(equalToConstant: 200.0),
+            self.biscuitBackground.widthAnchor.constraint(equalToConstant: 160),
             self.biscuitHeight!
             ])
         
@@ -117,6 +128,10 @@ public class BiscuitViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.transition(to: .open, animated: true)
         }
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+//            self.transition(to: .closed, animated: true)
+//        }
     }
     
     public override func viewWillLayoutSubviews() {
@@ -146,6 +161,9 @@ public class BiscuitViewController: UIViewController {
     }
     
     private func fixFrames(for state: State, animated: Bool, animateRepositioning: Bool = true) {
+        if animated {
+            self.contentAnimator.stopAnimation(true)
+        }
         
         self.state = state
         if animateRepositioning && animated {
@@ -167,12 +185,16 @@ public class BiscuitViewController: UIViewController {
                 self.titleLabel.frame = CGRect(x: self.toppingInsets.left, y: self.toppingInsets.top, width: self.biscuitBackground.frame.size.width - self.toppingInsets.left - self.toppingInsets.right, height: state.titleHeight())
                 
                 
-                var finalHeight: CGFloat = self.titleLabel.frame.size.height + self.toppingInsets.top
+                var finalHeight: CGFloat = self.titleLabel.frame.size.height + self.toppingInsets.top + self.titlePadding
                 
                 for top in self.toppings {
                     top.relativeView.alpha = 1.0
                     top.relativeView.transform = CGAffineTransform.identity
                     finalHeight += top.intrinsicHeight
+                    
+                    if top.relativeView != self.toppings.last!.relativeView {
+                        finalHeight += self.elementPadding
+                    }
                 }
                 
                 finalHeight += self.toppingInsets.bottom
@@ -207,17 +229,20 @@ public class BiscuitViewController: UIViewController {
     }
     
     private func repositionToppings() {
-        var height: CGFloat = State.open.titleHeight() + self.toppingInsets.top
+        guard self.toppings.count > 0 else {
+            return
+        }
+        
+        var height: CGFloat = State.open.titleHeight() + self.toppingInsets.top + self.titlePadding
         let width = self.biscuitBackground.frame.size.width - self.toppingInsets.left - self.toppingInsets.right
         
         
         for top in self.toppings {
-            // Recalculate
             
+            // Recalculate
             top.layout(for: width)
             
             // Fix Frames
-            
             if top.relativeView.superview == nil {
                 self.biscuitBackground.addSubview(top.relativeView)
                 top.relativeView.alpha = 0.0
@@ -228,6 +253,10 @@ public class BiscuitViewController: UIViewController {
             top.relativeView.frame = newFrame
             
             height += top.intrinsicHeight
+            
+            if self.toppings.last!.relativeView != top.relativeView {
+                height += self.elementPadding
+            }
         }
         
         
