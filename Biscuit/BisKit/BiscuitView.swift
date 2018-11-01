@@ -31,6 +31,13 @@ public class BiscuitView: UIView {
         effectView = UIVisualEffectView(effect: effect)
         effectView.translatesAutoresizingMaskIntoConstraints = false
         
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.systemFont(ofSize: 16.0, weight: .bold)
+        label.text = "Apple Pencil"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        effectView.contentView.addSubview(label)
+        
         layer.shadowOpacity = 0.25
         layer.shadowRadius = 25.0
         layer.shadowColor = UIColor.black.cgColor
@@ -42,7 +49,12 @@ public class BiscuitView: UIView {
             effectView.topAnchor.constraint(equalTo: topAnchor),
             effectView.bottomAnchor.constraint(equalTo: bottomAnchor),
             effectView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            effectView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            effectView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            label.topAnchor.constraint(equalTo: effectView.contentView.topAnchor),
+            label.bottomAnchor.constraint(equalTo: effectView.contentView.bottomAnchor),
+            label.leadingAnchor.constraint(equalTo: effectView.contentView.leadingAnchor),
+            label.trailingAnchor.constraint(equalTo: effectView.contentView.trailingAnchor)
             ])
     }
     

@@ -25,6 +25,10 @@
 		B3706AB6218A63C0001D1FF7 /* Biscuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706AB5218A63C0001D1FF7 /* Biscuit.swift */; };
 		B3706AB8218A63C5001D1FF7 /* BiscuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */; };
 		B37D7FB9218B7B54004F7AE7 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B37D7FB8218B7B54004F7AE7 /* demo.jpg */; };
+		B37D7FBD218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D7FBC218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift */; };
+		B37D7FBF218BA7C0004F7AE7 /* BiscuitPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D7FBE218BA7C0004F7AE7 /* BiscuitPresentationController.swift */; };
+		B37D7FC1218BB05F004F7AE7 /* BiscuitAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D7FC0218BB05F004F7AE7 /* BiscuitAnimationController.swift */; };
+		B37D7FC3218BBD22004F7AE7 /* BiscuitDismissController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D7FC2218BBD22004F7AE7 /* BiscuitDismissController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,10 @@
 		B3706AB5218A63C0001D1FF7 /* Biscuit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biscuit.swift; sourceTree = "<group>"; };
 		B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitView.swift; sourceTree = "<group>"; };
 		B37D7FB8218B7B54004F7AE7 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
+		B37D7FBC218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BiscuitViewController+Transitioning.swift"; sourceTree = "<group>"; };
+		B37D7FBE218BA7C0004F7AE7 /* BiscuitPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiscuitPresentationController.swift; sourceTree = "<group>"; };
+		B37D7FC0218BB05F004F7AE7 /* BiscuitAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiscuitAnimationController.swift; sourceTree = "<group>"; };
+		B37D7FC2218BBD22004F7AE7 /* BiscuitDismissController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiscuitDismissController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +163,6 @@
 				1E2C17CC218A62370018329A /* BiscuitTests */,
 				1E2C17D7218A62370018329A /* BiscuitUITests */,
 				1E2C1813218A63500018329A /* BisKit */,
-				1E2C1820218A63500018329A /* BisKitTests */,
 				1E2C17B6218A62370018329A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -209,11 +216,16 @@
 			children = (
 				1E2C1814218A63500018329A /* BisKit.h */,
 				B3706AB5218A63C0001D1FF7 /* Biscuit.swift */,
+				B37D7FBC218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift */,
+				B37D7FBE218BA7C0004F7AE7 /* BiscuitPresentationController.swift */,
+				B37D7FC0218BB05F004F7AE7 /* BiscuitAnimationController.swift */,
+				B37D7FC2218BBD22004F7AE7 /* BiscuitDismissController.swift */,
 				B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */,
 				1E2C1830218A635D0018329A /* Toppable.swift */,
 				1E2C182F218A635D0018329A /* ToppingLabel.swift */,
 				1E2C1833218A64860018329A /* ToppingButton.swift */,
 				1E2C1815218A63500018329A /* Info.plist */,
+				1E2C1820218A63500018329A /* BisKitTests */,
 			);
 			path = BisKit;
 			sourceTree = "<group>";
@@ -458,8 +470,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37D7FBD218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift in Sources */,
+				B37D7FC3218BBD22004F7AE7 /* BiscuitDismissController.swift in Sources */,
 				1E2C1832218A635D0018329A /* Toppable.swift in Sources */,
 				B3706AB6218A63C0001D1FF7 /* Biscuit.swift in Sources */,
+				B37D7FBF218BA7C0004F7AE7 /* BiscuitPresentationController.swift in Sources */,
+				B37D7FC1218BB05F004F7AE7 /* BiscuitAnimationController.swift in Sources */,
 				1E2C1831218A635D0018329A /* ToppingLabel.swift in Sources */,
 				B3706AB8218A63C5001D1FF7 /* BiscuitView.swift in Sources */,
 				1E2C1834218A64860018329A /* ToppingButton.swift in Sources */,
