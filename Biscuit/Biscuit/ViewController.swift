@@ -17,12 +17,10 @@ class ViewController: UIViewController {
         
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @IBAction func didTapTextBiscuit() {
         
-        let biscuit = BiscuitViewController(text: "foo bar")
-        self.present(biscuit, animated: false, completion: nil)
+        let biscuit = BiscuitViewController(text: "foo bar", timeout: 3.0)
+        self.present(biscuit, animated: true, completion: nil)
     }
-
 }
 
