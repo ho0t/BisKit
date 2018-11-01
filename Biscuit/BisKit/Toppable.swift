@@ -9,12 +9,11 @@
 import UIKit
 
 
-public protocol Toppable where Self: UIView {
+public protocol Toppable {
     
     var intrinsicHeight: CGFloat { get set }
+    var relativeView: UIView { get }
     
     func layout(for width: CGFloat)
-    
-    
     
 }

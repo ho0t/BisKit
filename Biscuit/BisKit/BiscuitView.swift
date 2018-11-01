@@ -36,6 +36,9 @@ public class BiscuitView: UIView {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 10)
         
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.lightGray.withAlphaComponent(0.2).cgColor
+        
         self.addSubview(effectView)
         
         NSLayoutConstraint.activate([
@@ -48,7 +51,9 @@ public class BiscuitView: UIView {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        effectView.layer.cornerRadius = bounds.size.height / 2.0
+        
+        layer.cornerRadius = min(bounds.size.height / 2.0, 32.0)
+        effectView.layer.cornerRadius = min(bounds.size.height / 2.0, 32.0)
         effectView.layer.masksToBounds = true
     }
     

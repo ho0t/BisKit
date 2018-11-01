@@ -19,9 +19,13 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let label = ToppingLabel.init(text: "Hello Everyonhgj gjjkgjkg jkgkg kgkgk k gk  ke!")
         
-        let biscuit = BiscuitViewController(text: "foo bar")
+        let toppings = [label]
+        let biscuit = BiscuitViewController(title: "Apple Pencil", toppings: toppings)
         self.present(biscuit, animated: false, completion: nil)
+        
+        
     }
 
 }

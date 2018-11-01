@@ -90,6 +90,10 @@ extension ToppingButton: Toppable {
         self.desiredHeight = size.height
     }
     
+    public var relativeView: UIView {
+        return self
+    }
+    
     
 }
 
