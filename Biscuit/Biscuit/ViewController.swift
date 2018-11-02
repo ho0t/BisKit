@@ -18,8 +18,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapTextBiscuit() {
-        
-        let biscuit = BiscuitViewController(text: "foo bar", timeout: 3.0)
+    
+        let percentage = ToppingBattery()
+        percentage.level = 1
+        let biscuit = BiscuitViewController(title: "Apple Pencil", toppings: [percentage], timeout: 3.0)
         self.present(biscuit, animated: true, completion: nil)
     }
 }

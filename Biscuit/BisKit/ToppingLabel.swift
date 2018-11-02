@@ -20,8 +20,8 @@ public class ToppingLabel: UILabel {
     
     public init(text: String) {
         super.init(frame: .zero)
-        self.commonInit()
         self.text = text
+        self.commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,28 +31,30 @@ public class ToppingLabel: UILabel {
     
     
     private func commonInit() {
-        self.font = UIFont.preferredFont(forTextStyle: .callout)
+        self.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         self.textColor = UIColor.lightGray
         self.lineBreakMode = .byWordWrapping
+        self.textAlignment = .center
+        
+        self.numberOfLines = 0
     }
     
+
 }
 
 
-// MARK: Toppable Implementation
+// MARK: Toppable
 extension ToppingLabel: Toppable {
     
     public var intrinsicHeight: CGFloat {
         get {
             return self.desiredHeight
         }
-        set {
-            self.desiredHeight = self.intrinsicHeight
-        }
     }
     
     public func layout(for width: CGFloat) {
         guard let txt = self.text else {
+            self.desiredHeight = 10
             return
         }
         
@@ -62,5 +64,9 @@ extension ToppingLabel: Toppable {
         self.desiredHeight = size.height
     }
     
+    
+    public var relativeView: UIView {
+        return self
+    }
     
 }
