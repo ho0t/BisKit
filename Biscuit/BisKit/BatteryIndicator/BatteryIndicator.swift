@@ -8,12 +8,30 @@
 
 import UIKit
 
+public enum BatteryState {
+    case normal
+    case charging
+    
+    internal func imageName() -> String {
+        if self == .normal {
+            return "battery"
+        }
+        return "battery_charging"
+    }
+}
+
 class BatteryIndicator: UIView {
     
     private var imageView: UIImageView = UIImageView()
     private var levelView: UIView = UIView()
     
     public var level: CGFloat = 0.3 {
+        didSet {
+            self.restoreLevel()
+        }
+    }
+    
+    public var state: BatteryState = .normal {
         didSet {
             self.restoreLevel()
         }
@@ -31,10 +49,6 @@ class BatteryIndicator: UIView {
     
     private func commonInit() {
         self.backgroundColor = UIColor.clear
-        
-        let bundle = Bundle(for: BatteryIndicator.self)
-        let img = UIImage(named: "battery", in: bundle, compatibleWith: nil)
-        self.imageView.image = img
         
         self.imageView.tintColor = UIColor.gray
         self.imageView.contentMode = .scaleToFill
@@ -63,6 +77,10 @@ class BatteryIndicator: UIView {
         else {
             self.levelView.backgroundColor = #colorLiteral(red: 0.2995099723, green: 0.8545438647, blue: 0.3975897431, alpha: 1)
         }
+        
+        let bundle = Bundle(for: BatteryIndicator.self)
+        let img = UIImage(named: self.state.imageName(), in: bundle, compatibleWith: nil)
+        self.imageView.image = img
         
     }
     

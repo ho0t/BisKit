@@ -19,6 +19,21 @@ public class ToppingBattery: UIView {
         }
     }
     
+    public var state: BatteryState = .normal {
+        didSet {
+            self.indicator.state = self.state
+        }
+    }
+    
+    public init(level: CGFloat, batteryState: BatteryState) {
+        super.init(frame: .zero)
+        
+        self.state = batteryState
+        self.level = level
+        
+        self.commonInit()
+    }
+    
     override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -40,6 +55,7 @@ public class ToppingBattery: UIView {
     }
     
     private func restoreLevel() {
+        self.indicator.state = self.state
         self.indicator.level = self.level
         self.label.text = "\(Int(self.level*100))%"
     }

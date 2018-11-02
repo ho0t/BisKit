@@ -20,8 +20,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 //        let label = ToppingLabel.init(text: "Hello Everyone!")
-        let percentage = ToppingBattery()
-        percentage.level = 1
+        let percentage = ToppingBattery(level: 0.5, batteryState: .charging)
         
 //        let button = ToppingButton.init(text: "Ciao")
         
