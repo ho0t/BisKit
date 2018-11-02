@@ -39,7 +39,6 @@ public class BiscuitViewController: UIViewController, Biscuit {
     
     private func commonInit(timeout: Double) {
         self.modalPresentationStyle = .custom
-        //self.modalTransitionStyle = .crossDissolve
         self.view.backgroundColor = .clear
         self.transitioningDelegate = self
         self.timeout = timeout
@@ -71,9 +70,7 @@ public class BiscuitViewController: UIViewController, Biscuit {
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //self.biscuitView.alpha = 0.0
         calculateTopConstraint()
-        
     }
     
 }

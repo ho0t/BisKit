@@ -15,19 +15,16 @@ class BiscuitDismissController: NSObject, UIViewControllerAnimatedTransitioning 
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        guard let source = transitionContext.viewController(forKey: .from) as? BiscuitViewController,
-            let destination = transitionContext.viewController(forKey: .to)
+        guard let source = transitionContext.viewController(forKey: .from) as? BiscuitViewController
             else {
                 return
         }
         
         let duration = transitionDuration(using: transitionContext)
         
-        UIView.animate(withDuration: duration + 1.0, delay: 0.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 0.0, options: .curveEaseOut, animations: {
-            
+        UIView.animate(withDuration: duration + 1.0, delay: 3.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 0.0, options: .curveEaseOut, animations: {
             source.biscuitView.transform = CGAffineTransform(translationX: 0, y: source.topConstraint.constant - 50.0)
         }, completion: { completed in
-            //source.view.isHidden = true
             transitionContext.completeTransition(completed)
         })
     }

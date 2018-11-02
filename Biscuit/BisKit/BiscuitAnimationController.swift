@@ -9,36 +9,19 @@
 import UIKit
 
 class BiscuitAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
-    /*
-    internal lazy var fadeInAnimator = {
-        UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1.2) { [unowned self] in
-            self.biscuitView.alpha = 1.0
-            self.biscuitView.transform = CGAffineTransform(translationX: 0, y: -self.topConstraint.constant)
-        }
-    }()
-    
-    internal lazy var fadeOutAnimator = {
-        UIViewPropertyAnimator(duration: 0.5 + 1.0, dampingRatio: 1.2) { [unowned self] in
-            self.biscuitView.transform = CGAffineTransform(translationX: 0, y: self.topConstraint.constant - 50)
-        }
-    }()
-    */
-    
+
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
 
-        guard let source = transitionContext.viewController(forKey: .from),
-            let destination = transitionContext.viewController(forKey: .to) as? BiscuitViewController
+        guard let destination = transitionContext.viewController(forKey: .to) as? BiscuitViewController
             else {
                 return
         }
         
         let containerView = transitionContext.containerView
-        let finalFrame = transitionContext.finalFrame(for: destination)
-        
         containerView.addSubview(destination.view)
         
         let duration = transitionDuration(using: transitionContext)
@@ -47,24 +30,8 @@ class BiscuitAnimationController: NSObject, UIViewControllerAnimatedTransitionin
             destination.biscuitView.alpha = 1.0
             destination.biscuitView.transform = CGAffineTransform(translationX: 0, y: -destination.topConstraint.constant)
         }) { completed in
-            DispatchQueue.main.asyncAfter(deadline: .now() + destination.timeout) {
-                destination.dismiss(animated: true, completion: {
-                })
-                transitionContext.completeTransition(completed)
-            }
-            //
+            destination.dismiss(animated: true, completion: nil)
+            transitionContext.completeTransition(completed)
         }
-        
-        // Add animations here
-        /*
-        self.fadeInAnimator.addCompletion { [unowned self] _ in
-            self.fadeOutAnimator.startAnimation(afterDelay: self.timeout)
-        }
-        
-        self.fadeOutAnimator.addCompletion { [unowned self] _ in
-            self.dismiss(animated: true, completion: nil)
-        }
-        
-        self.fadeInAnimator.startAnimation()*/
     }
 }
