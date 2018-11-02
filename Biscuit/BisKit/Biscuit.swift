@@ -8,10 +8,25 @@
 
 import UIKit
 
-public class BiscuitViewController: UIViewController {
+public protocol Biscuit {
+    init(title: String, timeout: Double)
+    init(title: String, toppings: [Toppable], timeout: Double)
+}
+
+public class BiscuitViewController: UIViewController, Biscuit {
+    
+    public var topConstraint: NSLayoutConstraint!
+    public var titleLabel: UILabel = UILabel()
     
     // Private Properties
+    internal var timeout: Double = 0.0
+    internal let defaultHeight: CGFloat = 54.0
+    internal let biscuitBackground = BiscuitView()
     private var toppings: [Toppable] = [Toppable]()
+    private var biscuitHeight: NSLayoutConstraint?
+    private var contentAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator()
+    private(set) var state: State = .closed
+    
     public var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 20, bottom: 8, right: 20) {
         didSet {
             self.view.setNeedsLayout()
@@ -29,12 +44,24 @@ public class BiscuitViewController: UIViewController {
         }
     }
     
-    private let biscuitBackground = BiscuitView()
-    private var biscuitHeight: NSLayoutConstraint?
-    private var contentAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator()
     
-    public var titleLabel: UILabel = UILabel()
+    // Initializers
     
+    public required convenience init(title: String, timeout: Double) {
+        self.init(title: title, toppings: [], timeout: timeout)
+    }
+    
+    public required init(title: String, toppings: [Toppable] = [], timeout: Double) {
+        super.init(nibName: nil, bundle: nil)
+        self.titleLabel.text = title
+        self.toppings = toppings
+        self.commonInit(timeout: timeout)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.commonInit(timeout: timeout)
+    }
     
     
     enum State: Int {
@@ -68,25 +95,12 @@ public class BiscuitViewController: UIViewController {
         
         static var automaticDimension: CGFloat = CGFloat(MAXFLOAT)
     }
-    private(set) var state: State = .closed
     
-    // Initializers
-    public required init(title: String, toppings: [Toppable] = []) {
-        super.init(nibName: nil, bundle: nil)
-        self.titleLabel.text = title
-        self.toppings = toppings
-        self.commonInit()
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.commonInit()
-    }
-    
-    private func commonInit() {
-        self.modalPresentationStyle = .overCurrentContext
-        self.modalTransitionStyle = .crossDissolve
+    private func commonInit(timeout: Double) {
+        self.modalPresentationStyle = .custom
         self.view.backgroundColor = .clear
+        self.transitioningDelegate = self
+        self.timeout = timeout
     }
     
     
@@ -94,15 +108,20 @@ public class BiscuitViewController: UIViewController {
         super.viewDidLoad()
         self.setupDesign()
     }
-
-    private func setupDesign() {
+    
+    internal func setupDesign() {
+        
         self.biscuitHeight = self.biscuitBackground.heightAnchor.constraint(equalToConstant: State.closed.biscuitHeight())
         self.view.addSubview(self.biscuitBackground)
         
+        topConstraint = biscuitBackground.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0.0)
+        calculateTopConstraint()
+        
         NSLayoutConstraint.activate([
-            self.biscuitBackground.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20.0),
-            self.biscuitBackground.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.biscuitBackground.widthAnchor.constraint(equalToConstant: 160),
+            topConstraint,
+            biscuitBackground.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            biscuitBackground.widthAnchor.constraint(equalToConstant: 160.0),
+            biscuitBackground.heightAnchor.constraint(equalToConstant: defaultHeight),
             self.biscuitHeight!
             ])
         
@@ -111,7 +130,6 @@ public class BiscuitViewController: UIViewController {
         
         
         // Title and Content Animator
-//        let timing = UISpringTimingParameters(dampingRatio: 0.8, initialVelocity: CGVector(dx: 0.1, dy: 0.1))
         let params = UICubicTimingParameters(animationCurve: .easeIn)
         self.contentAnimator = UIViewPropertyAnimator(duration: 0, timingParameters: params)
         
@@ -128,22 +146,21 @@ public class BiscuitViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.transition(to: .open, animated: true)
         }
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-//            self.transition(to: .closed, animated: true)
-//        }
     }
     
-    public override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    internal func calculateTopConstraint() {
+        topConstraint.constant = -defaultHeight - 20.0
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        calculateTopConstraint()
     }
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.fixFrames(animated: self.parent != nil)
     }
-    
-    
     
     // Toppings Calculations
     
