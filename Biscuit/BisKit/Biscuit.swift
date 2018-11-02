@@ -12,18 +12,18 @@ public class BiscuitViewController: UIViewController {
     
     // Private Properties
     private var toppings: [Toppable] = [Toppable]()
-    public var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 20, bottom: 10, right: 20) {
+    public var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 20, bottom: 8, right: 20) {
         didSet {
             self.view.setNeedsLayout()
         }
     }
     
-    public var titlePadding: CGFloat = 2 {
+    public var titlePadding: CGFloat = 0 {
         didSet {
             self.view.setNeedsLayout()
         }
     }
-    public var elementPadding: CGFloat = 1 {
+    public var elementPadding: CGFloat = 0 {
         didSet {
             self.view.setNeedsLayout()
         }
@@ -52,7 +52,7 @@ public class BiscuitViewController: UIViewController {
             if self == .closed {
                 return self.biscuitHeight()
             }
-            return 15.0
+            return 16.0
         }
         
         func titleFont() -> UIFont {
