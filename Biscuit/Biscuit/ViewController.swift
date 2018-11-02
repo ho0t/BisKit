@@ -19,9 +19,17 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+//        let label = ToppingLabel.init(text: "Hello Everyone!")
+        let percentage = ToppingBattery()
+        percentage.level = 1
         
-        let biscuit = BiscuitViewController(text: "foo bar")
+//        let button = ToppingButton.init(text: "Ciao")
+        
+        let toppings: [Toppable] = [percentage]
+        let biscuit = BiscuitViewController(title: "Apple Pencil", toppings: toppings)
         self.present(biscuit, animated: false, completion: nil)
+        
+        
     }
 
 }

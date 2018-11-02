@@ -62,6 +62,8 @@ public class ToppingButton: UIButton {
     private func commonInit() {
         let tint = self.tintColor
         self.tintColor = tint
+        
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .regular)
     }
     
 }
@@ -74,22 +76,22 @@ extension ToppingButton: Toppable {
         get {
             return self.desiredHeight
         }
-        set {
-            self.desiredHeight = self.intrinsicHeight
-        }
     }
     
     public func layout(for width: CGFloat) {
         guard let txt = self.text, let label = self.titleLabel else {
+            self.desiredHeight = 10
             return
         }
         
         let size = txt.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [
             NSAttributedString.Key.font : label.font
             ], context: nil)
-        self.desiredHeight = size.height
+        self.desiredHeight = size.height + 4
     }
     
+    public var relativeView: UIView {
+        return self
+    }
     
 }
-
