@@ -27,8 +27,8 @@ class BiscuitAnimationController: NSObject, UIViewControllerAnimatedTransitionin
         let duration = transitionDuration(using: transitionContext)
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 0.0, options: .curveEaseIn, animations: {
-            destination.biscuitBackground.alpha = 1.0
-            destination.biscuitBackground.transform = CGAffineTransform(translationX: 0, y: -destination.topConstraint.constant)
+            destination.biscuitView.alpha = 1.0
+            destination.biscuitView.transform = CGAffineTransform(translationX: 0, y: -destination.topConstraint.constant)
         }) { completed in
             destination.dismiss(animated: true, completion: nil)
             transitionContext.completeTransition(completed)
