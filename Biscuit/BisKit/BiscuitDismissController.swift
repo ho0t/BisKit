@@ -22,7 +22,7 @@ class BiscuitDismissController: NSObject, UIViewControllerAnimatedTransitioning 
         
         let duration = transitionDuration(using: transitionContext)
         
-        UIView.animate(withDuration: duration + 1.0, delay: 3.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 0.0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: duration + 1.0, delay: 0.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 0.0, options: .curveEaseOut, animations: {
             source.biscuitView.transform = CGAffineTransform(translationX: 0, y: source.topConstraint.constant - 50.0)
         }, completion: { completed in
             transitionContext.completeTransition(completed)

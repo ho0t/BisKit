@@ -243,11 +243,8 @@
 				B37D7FC2218BBD22004F7AE7 /* BiscuitDismissController.swift */,
 				B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */,
 				B3FCEDC9218FC3EB00FEDCA3 /* State.swift */,
-				1E2C1830218A635D0018329A /* Toppable.swift */,
-				1E2C182F218A635D0018329A /* ToppingLabel.swift */,
-				1E2C1833218A64860018329A /* ToppingButton.swift */,
 				B3FCEDCB218FC48200FEDCA3 /* ToppingsVisualHandler.swift */,
-				1EB702D0218BBEF700AB8FD9 /* BatteryIndicator */,
+				1E47305621948CFD00977DE4 /* Toppings */,
 				1E2C1815218A63500018329A /* Info.plist */,
 				1E2C1820218A63500018329A /* BisKitTests */,
 			);
@@ -261,6 +258,17 @@
 				1E2C1823218A63500018329A /* Info.plist */,
 			);
 			path = BisKitTests;
+			sourceTree = "<group>";
+		};
+		1E47305621948CFD00977DE4 /* Toppings */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C1830218A635D0018329A /* Toppable.swift */,
+				1E2C182F218A635D0018329A /* ToppingLabel.swift */,
+				1E2C1833218A64860018329A /* ToppingButton.swift */,
+				1EB702D0218BBEF700AB8FD9 /* BatteryIndicator */,
+			);
+			path = Toppings;
 			sourceTree = "<group>";
 		};
 		1EB702D0218BBEF700AB8FD9 /* BatteryIndicator */ = {

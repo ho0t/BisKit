@@ -10,14 +10,18 @@ import UIKit
 
 public class BiscuitViewController: UIViewController {
     
-    public var topConstraint: NSLayoutConstraint!
-    public var heightConstraint: NSLayoutConstraint?
-    public var titleLabel: UILabel = UILabel()
-    public var state: State = .closed
-    public let biscuitView = BiscuitView()
- 
+    internal var topConstraint: NSLayoutConstraint!
+    internal var heightConstraint: NSLayoutConstraint?
+    internal var titleLabel: UILabel = UILabel()
+    internal var state: State = .closed
+    internal let biscuitView = BiscuitView()
+    
+    public var automaticallyOpens: Bool = true
+    public var autoOpenTimeout: Double = 0.25
+    public var automaticallyDismiss: Bool = true
+    
     // Private Properties
-    internal var timeout: Double = 0.0
+    internal var timeout: Double = 1.5
     private var toppings: [Toppable] = [Toppable]()
     private var toppingsHandler: ToppingsVisualHandler!
     
@@ -31,21 +35,22 @@ public class BiscuitViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.titleLabel.text = title
         self.toppings = toppings
-        self.commonInit(timeout: timeout)
+        self.timeout = timeout
+        self.automaticallyDismiss = true
+        self.commonInit()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.commonInit(timeout: timeout)
+        self.commonInit()
     }
     
     
-    private func commonInit(timeout: Double) {
+    private func commonInit() {
         self.toppingsHandler = ToppingsVisualHandler(biscuit: self, toppings: self.toppings)
         self.modalPresentationStyle = .custom
         self.view.backgroundColor = .clear
         self.transitioningDelegate = self
-        self.timeout = timeout
     }
     
     
@@ -55,11 +60,10 @@ public class BiscuitViewController: UIViewController {
     }
     
     internal func setupDesign() {
-        
         self.heightConstraint = biscuitView.heightAnchor.constraint(equalToConstant: State.closed.biscuitHeight)
         self.view.addSubview(biscuitView)
         
-        topConstraint = biscuitView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0.0)
+        self.topConstraint = biscuitView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0.0)
         calculateTopConstraint()
         
         NSLayoutConstraint.activate([
@@ -72,6 +76,7 @@ public class BiscuitViewController: UIViewController {
         
         updateViewConstraints()
         
+        
         self.titleLabel.font = state.titleFont
         self.titleLabel.textColor = UIColor.black
         self.titleLabel.textAlignment = .center
@@ -79,25 +84,37 @@ public class BiscuitViewController: UIViewController {
         
         self.view.setNeedsLayout()
         
-        toppingsHandler.transition(to: .closed, animated: false)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.toppingsHandler.transition(to: .open, animated: true)
-        }
+        self.toppingsHandler.transition(to: .closed, animated: false)
     }
     
     internal func calculateTopConstraint() {
-        topConstraint.constant = -(self.heightConstraint?.constant ?? 0) - 20.0
+        self.topConstraint.constant = -(self.heightConstraint?.constant ?? 0) - 20.0
     }
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        calculateTopConstraint()
+        self.calculateTopConstraint()
+        
+        if self.automaticallyOpens {
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.autoOpenTimeout) {
+                self.toppingsHandler.transition(to: .open, animated: true)
+            }
+        }
+        
+        if self.automaticallyDismiss {
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.timeout) {
+                self.dismiss(animated: true, completion: {
+                    
+                })
+            }
+        }
     }
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        toppingsHandler.fixFrames(animated: self.parent != nil)
+        self.toppingsHandler.fixFrames(animated: self.parent != nil)
     }
+    
     
 }
