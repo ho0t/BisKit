@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let percentage = ToppingBattery(level: 0.5, batteryState: .charging)
         
         
-        let biscuit = BiscuitViewController(title: "Apple Pencil", toppings: [percentage], timeout: 3.0)
+        let biscuit = BiscuitViewController(title: "Apple Pencil", toppings: [percentage], timeout: 1.5)
         self.present(biscuit, animated: true, completion: nil)
 
     }

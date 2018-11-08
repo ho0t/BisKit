@@ -22,6 +22,7 @@
 		1E2C1831218A635D0018329A /* ToppingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C182F218A635D0018329A /* ToppingLabel.swift */; };
 		1E2C1832218A635D0018329A /* Toppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1830218A635D0018329A /* Toppable.swift */; };
 		1E2C1834218A64860018329A /* ToppingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1833218A64860018329A /* ToppingButton.swift */; };
+		1E4730582194943000977DE4 /* ForwardTouchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4730572194943000977DE4 /* ForwardTouchesView.swift */; };
 		1EB702D2218BBF9D00AB8FD9 /* BatteryIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB702D1218BBF9D00AB8FD9 /* BatteryIndicator.swift */; };
 		1EB702D6218BC35900AB8FD9 /* ToppingBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB702D5218BC35900AB8FD9 /* ToppingBattery.swift */; };
 		1EB702DC218BC73500AB8FD9 /* battery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702D9218BC73500AB8FD9 /* battery@2x.png */; };
@@ -117,6 +118,7 @@
 		1E2C182F218A635D0018329A /* ToppingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingLabel.swift; sourceTree = "<group>"; };
 		1E2C1830218A635D0018329A /* Toppable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toppable.swift; sourceTree = "<group>"; };
 		1E2C1833218A64860018329A /* ToppingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingButton.swift; sourceTree = "<group>"; };
+		1E4730572194943000977DE4 /* ForwardTouchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardTouchesView.swift; sourceTree = "<group>"; };
 		1EB702D1218BBF9D00AB8FD9 /* BatteryIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryIndicator.swift; sourceTree = "<group>"; };
 		1EB702D5218BC35900AB8FD9 /* ToppingBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingBattery.swift; sourceTree = "<group>"; };
 		1EB702D9218BC73500AB8FD9 /* battery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery@2x.png"; sourceTree = "<group>"; };
@@ -241,13 +243,11 @@
 				B37D7FBC218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift */,
 				B37D7FC0218BB05F004F7AE7 /* BiscuitAnimationController.swift */,
 				B37D7FC2218BBD22004F7AE7 /* BiscuitDismissController.swift */,
+				1E4730572194943000977DE4 /* ForwardTouchesView.swift */,
 				B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */,
 				B3FCEDC9218FC3EB00FEDCA3 /* State.swift */,
-				1E2C1830218A635D0018329A /* Toppable.swift */,
-				1E2C182F218A635D0018329A /* ToppingLabel.swift */,
-				1E2C1833218A64860018329A /* ToppingButton.swift */,
 				B3FCEDCB218FC48200FEDCA3 /* ToppingsVisualHandler.swift */,
-				1EB702D0218BBEF700AB8FD9 /* BatteryIndicator */,
+				1E47305621948CFD00977DE4 /* Toppings */,
 				1E2C1815218A63500018329A /* Info.plist */,
 				1E2C1820218A63500018329A /* BisKitTests */,
 			);
@@ -261,6 +261,17 @@
 				1E2C1823218A63500018329A /* Info.plist */,
 			);
 			path = BisKitTests;
+			sourceTree = "<group>";
+		};
+		1E47305621948CFD00977DE4 /* Toppings */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C1830218A635D0018329A /* Toppable.swift */,
+				1E2C182F218A635D0018329A /* ToppingLabel.swift */,
+				1E2C1833218A64860018329A /* ToppingButton.swift */,
+				1EB702D0218BBEF700AB8FD9 /* BatteryIndicator */,
+			);
+			path = Toppings;
 			sourceTree = "<group>";
 		};
 		1EB702D0218BBEF700AB8FD9 /* BatteryIndicator */ = {
@@ -521,6 +532,7 @@
 			files = (
 				B37D7FBD218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift in Sources */,
 				B37D7FC3218BBD22004F7AE7 /* BiscuitDismissController.swift in Sources */,
+				1E4730582194943000977DE4 /* ForwardTouchesView.swift in Sources */,
 				1E2C1832218A635D0018329A /* Toppable.swift in Sources */,
 				B3FCEDCA218FC3EB00FEDCA3 /* State.swift in Sources */,
 				B3FCEDCE218FC68100FEDCA3 /* BiscuitViewController.swift in Sources */,

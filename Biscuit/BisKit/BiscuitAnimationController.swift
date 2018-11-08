@@ -22,6 +22,7 @@ class BiscuitAnimationController: NSObject, UIViewControllerAnimatedTransitionin
         }
         
         let containerView = transitionContext.containerView
+        containerView.isUserInteractionEnabled = false
         containerView.addSubview(destination.view)
         
         let duration = transitionDuration(using: transitionContext)
@@ -30,7 +31,7 @@ class BiscuitAnimationController: NSObject, UIViewControllerAnimatedTransitionin
             destination.biscuitView.alpha = 1.0
             destination.biscuitView.transform = CGAffineTransform(translationX: 0, y: -destination.topConstraint.constant)
         }) { completed in
-            destination.dismiss(animated: true, completion: nil)
+//            destination.dismiss(animated: true, completion: nil)
             transitionContext.completeTransition(completed)
         }
     }

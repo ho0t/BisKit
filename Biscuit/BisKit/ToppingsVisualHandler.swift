@@ -20,7 +20,7 @@ public class ToppingsVisualHandler: NSObject {
         
         // Title and Content Animator
         let params = UICubicTimingParameters(animationCurve: .easeIn)
-        self.contentAnimator = UIViewPropertyAnimator(duration: 0, timingParameters: params)
+        self.contentAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: params)
     }
 
     public var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 20, bottom: 8, right: 20) {
@@ -110,7 +110,7 @@ public class ToppingsVisualHandler: NSObject {
                 
                 for topping in self.toppings {
                     topping.relativeView.alpha = 0.0
-                    topping.relativeView.transform = CGAffineTransform.init(translationX: 0, y: -10)
+                    topping.relativeView.transform = CGAffineTransform.init(translationX: 0, y: -5)
                 }
                 
                 self.biscuit.heightConstraint?.constant = State.closed.biscuitHeight
@@ -138,7 +138,7 @@ public class ToppingsVisualHandler: NSObject {
         var height: CGFloat = State.open.titleHeight + self.toppingInsets.top + self.titlePadding
         let width = self.biscuit.biscuitView.frame.size.width - self.toppingInsets.left - self.toppingInsets.right
         
-        toppings.forEach { topping in
+        self.toppings.forEach { topping in
             
             // Recalculate
             topping.layout(for: width)
@@ -147,7 +147,7 @@ public class ToppingsVisualHandler: NSObject {
             if topping.relativeView.superview == nil {
                 self.biscuit.biscuitView.addSubview(topping.relativeView)
                 topping.relativeView.alpha = 0.0
-                topping.relativeView.transform = CGAffineTransform.init(translationX: 0, y: -10)
+                topping.relativeView.transform = CGAffineTransform.init(translationX: 0, y: -5)
             }
             
             let newFrame = CGRect(x: self.toppingInsets.left, y: height, width: width, height: topping.intrinsicHeight)
