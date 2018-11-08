@@ -15,7 +15,6 @@ public class BiscuitViewController: UIViewController {
     internal var titleLabel: UILabel = UILabel()
     internal var state: State = .closed
     internal let biscuitView = BiscuitView()
-//    private var touchView: ForwardTouchesView = ForwardTouchesView()
     
     public var automaticallyOpens: Bool = true
     public var autoOpenTimeout: Double = 0.25
@@ -61,10 +60,6 @@ public class BiscuitViewController: UIViewController {
     }
     
     internal func setupDesign() {
-//        self.touchView.backgroundColor = UIColor.clear
-//        self.touchView.isUserInteractionEnabled = true
-//        self.touchView.isMultipleTouchEnabled = true
-//        self.view.addSubview(self.touchView)
         self.heightConstraint = biscuitView.heightAnchor.constraint(equalToConstant: State.closed.biscuitHeight)
         self.view.addSubview(biscuitView)
         
@@ -116,18 +111,10 @@ public class BiscuitViewController: UIViewController {
         }
     }
     
-    public override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-//        self.touchView.frame = self.view.bounds
-    }
-    
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.toppingsHandler.fixFrames(animated: self.parent != nil)
     }
     
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("fsjkwejfwe")
-    }
     
 }
