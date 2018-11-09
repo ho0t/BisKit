@@ -45,14 +45,12 @@ public class BiscuitViewController: UIViewController {
         self.commonInit()
     }
     
-    
     private func commonInit() {
         self.toppingsHandler = ToppingsVisualHandler(biscuit: self, toppings: self.toppings)
         self.modalPresentationStyle = .custom
         self.view.backgroundColor = .clear
         self.transitioningDelegate = self
     }
-    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +113,5 @@ public class BiscuitViewController: UIViewController {
         super.viewDidLayoutSubviews()
         self.toppingsHandler.fixFrames(animated: self.parent != nil)
     }
-    
     
 }

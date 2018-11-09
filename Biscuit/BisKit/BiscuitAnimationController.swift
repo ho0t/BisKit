@@ -31,7 +31,6 @@ class BiscuitAnimationController: NSObject, UIViewControllerAnimatedTransitionin
             destination.biscuitView.alpha = 1.0
             destination.biscuitView.transform = CGAffineTransform(translationX: 0, y: -destination.topConstraint.constant)
         }) { completed in
-//            destination.dismiss(animated: true, completion: nil)
             transitionContext.completeTransition(completed)
         }
     }
