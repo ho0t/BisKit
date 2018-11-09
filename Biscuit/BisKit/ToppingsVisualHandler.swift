@@ -23,7 +23,7 @@ public class ToppingsVisualHandler: NSObject {
         self.contentAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: params)
     }
 
-    public var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 20, bottom: 8, right: 20) {
+    public var toppingInsets: UIEdgeInsets = UIEdgeInsets.init(top: 7, left: 20, bottom: 7, right: 20) {
         didSet {
             self.biscuit.view.setNeedsLayout()
         }
@@ -110,7 +110,7 @@ public class ToppingsVisualHandler: NSObject {
                 
                 for topping in self.toppings {
                     topping.relativeView.alpha = 0.0
-                    topping.relativeView.transform = CGAffineTransform.init(translationX: 0, y: -5)
+                    topping.relativeView.transform = CGAffineTransform.init(translationX: 0, y: 0)
                 }
                 
                 self.biscuit.heightConstraint?.constant = State.closed.biscuitHeight
