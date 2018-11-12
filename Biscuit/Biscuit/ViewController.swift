@@ -20,10 +20,17 @@ class ViewController: UIViewController {
 
     @IBAction func didTapTextBiscuit() {
     
+        let label = ToppingLabel(text: "Battery is low.")
+        
+        let biscuit = BiscuitViewController(title: "My Pencil", toppings: [label], timeout: 1.5)
+        self.present(biscuit, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapBatteryBiscuit() {
+        
         let percentage = ToppingBattery(level: 0.5, batteryState: .charging)
         
-        
-        let biscuit = BiscuitViewController(title: "Apple Pencil", toppings: [percentage], timeout: 1.5)
+        let biscuit = BiscuitViewController(title: "My Pencil", toppings: [percentage], timeout: 1.5)
         self.present(biscuit, animated: true, completion: nil)
 
     }
