@@ -20,31 +20,63 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ySA-iB-ZGa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jN-UA-qwT">
-                                <rect key="frame" x="82.5" y="308.5" width="210" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0l-WE-RNA">
+                                <rect key="frame" x="82.5" y="279.5" width="210" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jN-UA-qwT">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MJd-SC-19B"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="T2u-Dg-iTC"/>
+                                        </constraints>
+                                        <state key="normal" title="Display text biscuit"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapTextBiscuit" destination="BYZ-38-t0r" eventType="touchUpInside" id="6zS-PW-srr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgZ-O8-e2Q">
+                                        <rect key="frame" x="0.0" y="58" width="210" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="8df-ro-UHe"/>
+                                            <constraint firstAttribute="height" constant="50" id="Wzy-4Q-Idz"/>
+                                        </constraints>
+                                        <state key="normal" title="Display battery biscuit"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapBatteryBiscuit" destination="BYZ-38-t0r" eventType="touchUpInside" id="fUB-9e-sLG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="MJd-SC-19B"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="T2u-Dg-iTC"/>
+                                    <constraint firstItem="rgZ-O8-e2Q" firstAttribute="top" secondItem="1jN-UA-qwT" secondAttribute="bottom" constant="8" id="Fjz-Gl-s9a"/>
+                                    <constraint firstAttribute="trailing" secondItem="rgZ-O8-e2Q" secondAttribute="trailing" id="K3N-7Z-q6c"/>
+                                    <constraint firstItem="rgZ-O8-e2Q" firstAttribute="leading" secondItem="W0l-WE-RNA" secondAttribute="leading" id="T7B-8L-CA0"/>
+                                    <constraint firstAttribute="trailing" secondItem="1jN-UA-qwT" secondAttribute="trailing" id="VLO-ii-5F1"/>
+                                    <constraint firstAttribute="bottom" secondItem="rgZ-O8-e2Q" secondAttribute="bottom" id="ceB-1c-idu"/>
+                                    <constraint firstItem="1jN-UA-qwT" firstAttribute="top" secondItem="W0l-WE-RNA" secondAttribute="top" id="hZe-j2-jeP"/>
+                                    <constraint firstItem="1jN-UA-qwT" firstAttribute="leading" secondItem="W0l-WE-RNA" secondAttribute="leading" id="mkM-tl-PwD"/>
                                 </constraints>
-                                <state key="normal" title="Display text biscuit"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="didTapTextBiscuit" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0k-Cv-ezp"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1jN-UA-qwT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8bn-M3-hSY"/>
+                            <constraint firstItem="W0l-WE-RNA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AkC-gX-j9L"/>
                             <constraint firstAttribute="bottom" secondItem="ySA-iB-ZGa" secondAttribute="bottom" id="DCm-9N-Dyd"/>
                             <constraint firstItem="ySA-iB-ZGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tvv-al-Zkr"/>
                             <constraint firstAttribute="trailing" secondItem="ySA-iB-ZGa" secondAttribute="trailing" id="WL8-eB-dXB"/>
-                            <constraint firstItem="1jN-UA-qwT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZRp-wU-6JE"/>
+                            <constraint firstItem="W0l-WE-RNA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dSs-oU-WUK"/>
                             <constraint firstItem="ySA-iB-ZGa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sii-oy-BHB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
