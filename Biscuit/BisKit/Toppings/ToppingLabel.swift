@@ -59,7 +59,7 @@ extension ToppingLabel: Toppable {
         }
         
         let size = txt.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [
-            NSAttributedString.Key.font : self.font
+            NSAttributedString.Key.font : self.font ?? UIFont.preferredFont(forTextStyle: .body)
             ], context: nil)
         self.desiredHeight = size.height
     }

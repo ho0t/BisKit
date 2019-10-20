@@ -85,7 +85,7 @@ extension ToppingButton: Toppable {
         }
         
         let size = txt.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [
-            NSAttributedString.Key.font : label.font
+            NSAttributedString.Key.font : label.font ?? UIFont.preferredFont(forTextStyle: .body)
             ], context: nil)
         self.desiredHeight = size.height + 4
     }
