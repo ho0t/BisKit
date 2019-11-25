@@ -185,6 +185,7 @@
 				1E2C17CC218A62370018329A /* BiscuitTests */,
 				1E2C17D7218A62370018329A /* BiscuitUITests */,
 				1E2C1813218A63500018329A /* BisKit */,
+				1E2C1820218A63500018329A /* BisKitTests */,
 				1E2C17B6218A62370018329A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -246,7 +247,6 @@
 				B3FCEDCB218FC48200FEDCA3 /* ToppingsVisualHandler.swift */,
 				1E47305621948CFD00977DE4 /* Toppings */,
 				1E2C1815218A63500018329A /* Info.plist */,
-				1E2C1820218A63500018329A /* BisKitTests */,
 			);
 			path = BisKit;
 			sourceTree = "<group>";
@@ -406,21 +406,25 @@
 				TargetAttributes = {
 					1E2C17B4218A62370018329A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 					};
 					1E2C17C8218A62370018329A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 1E2C17B4218A62370018329A;
 					};
 					1E2C17D3218A62370018329A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 1E2C17B4218A62370018329A;
 					};
 					1E2C1811218A63500018329A = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1110;
 					};
 					1E2C1819218A63500018329A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 1E2C17B4218A62370018329A;
 					};
 				};
@@ -731,7 +735,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.Biscuit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -751,7 +755,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.Biscuit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -770,7 +774,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BiscuitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biscuit.app/Biscuit";
 			};
@@ -790,7 +794,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BiscuitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biscuit.app/Biscuit";
 			};
@@ -809,7 +813,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BiscuitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Biscuit;
 			};
@@ -828,7 +832,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BiscuitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Biscuit;
 			};
@@ -857,7 +861,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -886,7 +890,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BisKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -906,7 +910,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BisKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biscuit.app/Biscuit";
 			};
@@ -925,7 +929,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ho0t.BisKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biscuit.app/Biscuit";
 			};
