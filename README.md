@@ -30,6 +30,12 @@ To install BisKit through CocoaPods, simply add this line to your `Podfile`:
 pod 'BisKit'
 ```
 
+### Swift Package Manager (Xcode 11+)
+
+Open your project, select `File > Swift Packages > Add Package Depedency` and paste the [repository URL](https://github.com/ho0t/BisKit) into the search bar.
+
+  A more detailed guide can be found here: [Adding Package Dependencies to Your App](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app)
+
 ## Usage
 
 ### Basic
