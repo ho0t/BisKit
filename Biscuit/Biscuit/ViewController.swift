@@ -17,12 +17,16 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func didTapSingleLineTextBiscuit() {
+        let biscuit = BiscuitViewController(title: "Biscuit pasted from Jar", timeout: 3)
+        self.present(biscuit, animated: true, completion: nil)
+    }
 
-    @IBAction func didTapTextBiscuit() {
+    @IBAction func didTapTextBiscuitWithTopping() {
     
         let label = ToppingLabel(text: "Battery is low.")
         
-        let biscuit = BiscuitViewController(title: "My Pencil", toppings: [label], timeout: 1.5)
+        let biscuit = BiscuitViewController(title: "My Pencil", toppings: [label], timeout: 3)
         self.present(biscuit, animated: true, completion: nil)
     }
     
@@ -30,7 +34,7 @@ class ViewController: UIViewController {
         
         let percentage = ToppingBattery(level: 0.5, batteryState: .charging)
         
-        let biscuit = BiscuitViewController(title: "My Pencil", toppings: [percentage], timeout: 1.5)
+        let biscuit = BiscuitViewController(title: "My Pencil", toppings: [percentage], timeout: 3)
         self.present(biscuit, animated: true, completion: nil)
 
     }
