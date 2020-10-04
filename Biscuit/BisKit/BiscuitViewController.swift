@@ -67,7 +67,7 @@ public class BiscuitViewController: UIViewController {
         NSLayoutConstraint.activate([
             topConstraint,
             biscuitView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            biscuitView.widthAnchor.constraint(equalToConstant: 160.0),
+            biscuitView.widthAnchor.constraint(greaterThanOrEqualToConstant: 160.0),
             self.topConstraint,
             self.heightConstraint!
             ])
@@ -76,7 +76,7 @@ public class BiscuitViewController: UIViewController {
         
         
         self.titleLabel.font = state.titleFont
-        self.titleLabel.textColor = UIColor.black
+        self.titleLabel.textColor = .biskitPrimaryTextColor
         self.titleLabel.textAlignment = .center
         self.biscuitView.addSubview(self.titleLabel)
         

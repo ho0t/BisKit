@@ -24,14 +24,8 @@
 		1E2C1834218A64860018329A /* ToppingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1833218A64860018329A /* ToppingButton.swift */; };
 		1EB702D2218BBF9D00AB8FD9 /* BatteryIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB702D1218BBF9D00AB8FD9 /* BatteryIndicator.swift */; };
 		1EB702D6218BC35900AB8FD9 /* ToppingBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB702D5218BC35900AB8FD9 /* ToppingBattery.swift */; };
-		1EB702DC218BC73500AB8FD9 /* battery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702D9218BC73500AB8FD9 /* battery@2x.png */; };
-		1EB702DD218BC73500AB8FD9 /* battery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702DA218BC73500AB8FD9 /* battery@3x.png */; };
-		1EB702DE218BC73500AB8FD9 /* battery.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702DB218BC73500AB8FD9 /* battery.png */; };
-		1EB702E0218BC8BF00AB8FD9 /* battery.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702DF218BC8BF00AB8FD9 /* battery.pdf */; };
-		1EB702E5218BCF1300AB8FD9 /* battery_charging.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702E1218BCF1300AB8FD9 /* battery_charging.png */; };
-		1EB702E6218BCF1300AB8FD9 /* battery_charging@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702E2218BCF1300AB8FD9 /* battery_charging@3x.png */; };
-		1EB702E7218BCF1300AB8FD9 /* battery_charging.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702E3218BCF1300AB8FD9 /* battery_charging.pdf */; };
-		1EB702E8218BCF1300AB8FD9 /* battery_charging@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EB702E4218BCF1300AB8FD9 /* battery_charging@2x.png */; };
+		B3629DFC2529C86D00C68584 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3629DFB2529C86D00C68584 /* Media.xcassets */; };
+		B3629E002529CD7A00C68584 /* UIColor+BisKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629DFF2529CD7A00C68584 /* UIColor+BisKit.swift */; };
 		B3706AB8218A63C5001D1FF7 /* BiscuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */; };
 		B37D7FB9218B7B54004F7AE7 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B37D7FB8218B7B54004F7AE7 /* demo.jpg */; };
 		B37D7FBD218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D7FBC218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift */; };
@@ -119,14 +113,8 @@
 		1E2C1833218A64860018329A /* ToppingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingButton.swift; sourceTree = "<group>"; };
 		1EB702D1218BBF9D00AB8FD9 /* BatteryIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryIndicator.swift; sourceTree = "<group>"; };
 		1EB702D5218BC35900AB8FD9 /* ToppingBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingBattery.swift; sourceTree = "<group>"; };
-		1EB702D9218BC73500AB8FD9 /* battery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery@2x.png"; sourceTree = "<group>"; };
-		1EB702DA218BC73500AB8FD9 /* battery@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery@3x.png"; sourceTree = "<group>"; };
-		1EB702DB218BC73500AB8FD9 /* battery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery.png; sourceTree = "<group>"; };
-		1EB702DF218BC8BF00AB8FD9 /* battery.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = battery.pdf; sourceTree = "<group>"; };
-		1EB702E1218BCF1300AB8FD9 /* battery_charging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery_charging.png; sourceTree = "<group>"; };
-		1EB702E2218BCF1300AB8FD9 /* battery_charging@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery_charging@3x.png"; sourceTree = "<group>"; };
-		1EB702E3218BCF1300AB8FD9 /* battery_charging.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = battery_charging.pdf; sourceTree = "<group>"; };
-		1EB702E4218BCF1300AB8FD9 /* battery_charging@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "battery_charging@2x.png"; sourceTree = "<group>"; };
+		B3629DFB2529C86D00C68584 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		B3629DFF2529CD7A00C68584 /* UIColor+BisKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+BisKit.swift"; sourceTree = "<group>"; };
 		B3706AB7218A63C5001D1FF7 /* BiscuitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitView.swift; sourceTree = "<group>"; };
 		B37D7FB8218B7B54004F7AE7 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 		B37D7FBC218BA67D004F7AE7 /* BiscuitViewController+Transitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BiscuitViewController+Transitioning.swift"; sourceTree = "<group>"; };
@@ -247,6 +235,8 @@
 				B3FCEDCB218FC48200FEDCA3 /* ToppingsVisualHandler.swift */,
 				1E47305621948CFD00977DE4 /* Toppings */,
 				1E2C1815218A63500018329A /* Info.plist */,
+				B3629DFB2529C86D00C68584 /* Media.xcassets */,
+				B3629DFF2529CD7A00C68584 /* UIColor+BisKit.swift */,
 			);
 			path = BisKit;
 			sourceTree = "<group>";
@@ -276,14 +266,6 @@
 			children = (
 				1EB702D5218BC35900AB8FD9 /* ToppingBattery.swift */,
 				1EB702D1218BBF9D00AB8FD9 /* BatteryIndicator.swift */,
-				1EB702DF218BC8BF00AB8FD9 /* battery.pdf */,
-				1EB702DB218BC73500AB8FD9 /* battery.png */,
-				1EB702D9218BC73500AB8FD9 /* battery@2x.png */,
-				1EB702DA218BC73500AB8FD9 /* battery@3x.png */,
-				1EB702E3218BCF1300AB8FD9 /* battery_charging.pdf */,
-				1EB702E1218BCF1300AB8FD9 /* battery_charging.png */,
-				1EB702E4218BCF1300AB8FD9 /* battery_charging@2x.png */,
-				1EB702E2218BCF1300AB8FD9 /* battery_charging@3x.png */,
 			);
 			path = BatteryIndicator;
 			sourceTree = "<group>";
@@ -481,14 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EB702E6218BCF1300AB8FD9 /* battery_charging@3x.png in Resources */,
-				1EB702E8218BCF1300AB8FD9 /* battery_charging@2x.png in Resources */,
-				1EB702E7218BCF1300AB8FD9 /* battery_charging.pdf in Resources */,
-				1EB702DC218BC73500AB8FD9 /* battery@2x.png in Resources */,
-				1EB702DE218BC73500AB8FD9 /* battery.png in Resources */,
-				1EB702E0218BC8BF00AB8FD9 /* battery.pdf in Resources */,
-				1EB702E5218BCF1300AB8FD9 /* battery_charging.png in Resources */,
-				1EB702DD218BC73500AB8FD9 /* battery@3x.png in Resources */,
+				B3629DFC2529C86D00C68584 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +517,7 @@
 				B3FCEDCC218FC48200FEDCA3 /* ToppingsVisualHandler.swift in Sources */,
 				1EB702D2218BBF9D00AB8FD9 /* BatteryIndicator.swift in Sources */,
 				B3706AB8218A63C5001D1FF7 /* BiscuitView.swift in Sources */,
+				B3629E002529CD7A00C68584 /* UIColor+BisKit.swift in Sources */,
 				1E2C1834218A64860018329A /* ToppingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
