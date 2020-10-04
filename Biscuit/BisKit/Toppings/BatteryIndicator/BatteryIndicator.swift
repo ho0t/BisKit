@@ -73,8 +73,7 @@ class BatteryIndicator: UIView {
         
         if self.level < 0.2 {
             self.levelView.backgroundColor = #colorLiteral(red: 0.8545438647, green: 0.2995099723, blue: 0.3087605372, alpha: 1)
-        }
-        else {
+        } else {
             self.levelView.backgroundColor = #colorLiteral(red: 0.2995099723, green: 0.8545438647, blue: 0.3975897431, alpha: 1)
         }
         

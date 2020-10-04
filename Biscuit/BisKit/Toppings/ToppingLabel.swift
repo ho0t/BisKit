@@ -32,7 +32,7 @@ public class ToppingLabel: UILabel {
     
     private func commonInit() {
         self.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        self.textColor = UIColor.lightGray
+        self.textColor = .biskitPrimaryTextColor
         self.lineBreakMode = .byWordWrapping
         self.textAlignment = .center
         

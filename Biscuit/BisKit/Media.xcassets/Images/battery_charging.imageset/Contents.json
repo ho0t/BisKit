@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "battery_charging.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -27,7 +27,7 @@ public class BiscuitView: UIView {
         
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        let effect = UIBlurEffect(style: .extraLight)
+        let effect = UIBlurEffect(style: traitCollection.userInterfaceStyle == .dark ? .dark : .extraLight)
         effectView = UIVisualEffectView(effect: effect)
         effectView.translatesAutoresizingMaskIntoConstraints = false
         

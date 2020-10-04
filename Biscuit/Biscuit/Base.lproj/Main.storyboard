@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,28 +19,45 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ySA-iB-ZGa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0l-WE-RNA">
-                                <rect key="frame" x="82.5" y="279.5" width="210" height="108"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ELK-7q-qaq">
+                                <rect key="frame" x="82.5" y="242.5" width="210" height="182"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jN-UA-qwT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R0-tx-zIU">
                                         <rect key="frame" x="0.0" y="0.0" width="210" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="MJd-SC-19B"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="T2u-Dg-iTC"/>
+                                            <constraint firstAttribute="height" constant="50" id="Pxl-JE-Nye"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="Tc3-7d-YVC"/>
                                         </constraints>
-                                        <state key="normal" title="Display text biscuit"/>
+                                        <state key="normal" title="Display single line biscuit"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didTapTextBiscuit" destination="BYZ-38-t0r" eventType="touchUpInside" id="6zS-PW-srr"/>
+                                            <action selector="didTapSingleLineTextBiscuit" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qzw-fQ-I5L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jN-UA-qwT">
+                                        <rect key="frame" x="0.0" y="66" width="210" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MJd-SC-19B"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="T2u-Dg-iTC"/>
+                                        </constraints>
+                                        <state key="normal" title="Display multiline biscuit"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapTextBiscuitWithTopping" destination="BYZ-38-t0r" eventType="touchUpInside" id="prH-EZ-bC2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgZ-O8-e2Q">
-                                        <rect key="frame" x="0.0" y="58" width="210" height="50"/>
+                                        <rect key="frame" x="0.0" y="132" width="210" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="8df-ro-UHe"/>
@@ -58,25 +74,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="rgZ-O8-e2Q" firstAttribute="top" secondItem="1jN-UA-qwT" secondAttribute="bottom" constant="8" id="Fjz-Gl-s9a"/>
-                                    <constraint firstAttribute="trailing" secondItem="rgZ-O8-e2Q" secondAttribute="trailing" id="K3N-7Z-q6c"/>
-                                    <constraint firstItem="rgZ-O8-e2Q" firstAttribute="leading" secondItem="W0l-WE-RNA" secondAttribute="leading" id="T7B-8L-CA0"/>
-                                    <constraint firstAttribute="trailing" secondItem="1jN-UA-qwT" secondAttribute="trailing" id="VLO-ii-5F1"/>
-                                    <constraint firstAttribute="bottom" secondItem="rgZ-O8-e2Q" secondAttribute="bottom" id="ceB-1c-idu"/>
-                                    <constraint firstItem="1jN-UA-qwT" firstAttribute="top" secondItem="W0l-WE-RNA" secondAttribute="top" id="hZe-j2-jeP"/>
-                                    <constraint firstItem="1jN-UA-qwT" firstAttribute="leading" secondItem="W0l-WE-RNA" secondAttribute="leading" id="mkM-tl-PwD"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="W0l-WE-RNA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AkC-gX-j9L"/>
+                            <constraint firstItem="ELK-7q-qaq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9G2-8J-mpN"/>
                             <constraint firstAttribute="bottom" secondItem="ySA-iB-ZGa" secondAttribute="bottom" id="DCm-9N-Dyd"/>
                             <constraint firstItem="ySA-iB-ZGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tvv-al-Zkr"/>
                             <constraint firstAttribute="trailing" secondItem="ySA-iB-ZGa" secondAttribute="trailing" id="WL8-eB-dXB"/>
-                            <constraint firstItem="W0l-WE-RNA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dSs-oU-WUK"/>
+                            <constraint firstItem="ELK-7q-qaq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hVR-1g-VsS"/>
                             <constraint firstItem="ySA-iB-ZGa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sii-oy-BHB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

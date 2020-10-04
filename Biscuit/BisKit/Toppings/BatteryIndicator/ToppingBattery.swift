@@ -46,7 +46,7 @@ public class ToppingBattery: UIView {
     
     private func commonInit() {
         self.label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        self.label.textColor = UIColor.gray
+        self.label.textColor = .biskitSecondaryTextColor
         self.label.textAlignment = .right
         
         self.addSubview(label)
